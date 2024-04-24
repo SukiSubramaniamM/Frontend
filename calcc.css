@@ -1,0 +1,68 @@
+.keys{
+    background: #000;
+    text-align: center;
+    height: fit-content;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    gap: 10px;
+    border-radius: 25px;
+
+    .firstRow{
+        display: flex;
+        gap: 10px;
+    }
+    .secondRow{
+        display: flex;
+        gap: 10px;
+    }
+    .thirdRow{
+        display: flex;
+        gap: 10px;
+    }
+    .fourthRow{
+        display: flex;
+        gap: 10px;
+    }
+    .fifthRow{
+        display: flex;
+        gap: 10px;
+    }
+    
+}
+
+button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+input{
+    background-color:black;
+    border-width: 0px;
+    color: white;
+    height:40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 50px;
+}
+.zero{
+    width: 110px;
+    border-radius: 40px;
+}
+.lk{
+    background-color: rgb(249, 148, 7);
+}
+.fR{
+    background-color: rgb(208, 204, 204);
+    color: black;
+}

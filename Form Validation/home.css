@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.main{
+    background-color: white;
+    height: fit-content;
+    width: 400px;
+    padding:20px;
+    border:1px solid;
+}
+input{
+    width: 325px;
+    height: 25px;
+    border-radius: 2px;
+    border-width: 1px;
+}
+.email{
+    padding-left: 30px;
+}
+.Pass{
+    padding-left: 30px;
+}
+button{
+    margin: 10px;
+    width: 335px;
+    height: 30px;
+    margin-left: 30px;
+    background-color: green;
+    color: white;
+    border-width: 0px;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid;
+}
+#result{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.red{
+    border: 2px solid red;
+}
+.redcol{
+    color: red;
+}
+.green{
+    background-color: rgb(162, 233, 209);
+}
+.success{
+    color: green;
+}

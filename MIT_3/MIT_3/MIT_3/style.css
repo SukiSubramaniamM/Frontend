@@ -1,0 +1,74 @@
+body{
+    background-color: lightcoral;
+    height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-intro-desktop.png);
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+.left{
+    width: 450px;
+    height: 300px;
+    color: white;
+}
+.right{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  
+    
+    b{
+        font-weight: bold;
+    }
+}
+
+.right  button{
+    border-radius: 5px;
+    background-color: rgb(7, 7, 185);
+    color: white;
+    padding: 10px;
+}
+input{
+    padding: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+
+    button{
+        border-radius: 5px;
+        background-color: rgb(9, 167, 9);
+        color: white;
+    }
+
+    p{
+        color: grey;
+    }
+    b{
+        color: red;
+    }
+}
+
+.redb{
+    border: 2px solid red;
+}
+
+.red{
+    color: red;
+    text-align: right;
+    
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body id="body">
+    <div class="main" id="main">
+        <div class="shape" id="shape"></div>
+        <p>Count = <b id="count">0</b></p>
+        <div class="buttons">
+            <button onclick="change()">Click</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="red()">Red</button>
+            <button onclick="blue()">Blue</button>
+            <button onclick="toggle()">Toggle</button>
+        </div>
+    </div>   
+    <script>
+        var countvalue = document.getElementById("count")
+        var main = document.getElementById("body")
+        let count = 0
+        function change(){
+            count++
+            countvalue.textContent = count;
+            if(count%2 == 0 && count%5 !== 0){
+                shape.className = "square"
+            }
+            else if(count%5 == 0){
+                shape.className = "circle"
+            }
+            else if(count == 0){
+                shape.className = "rectangle"
+            }
+            else{
+                shape.className = "rectangle"
+            }
+        }
+        function reset(){
+            count=0;
+            countvalue.textContent = count;
+            shape.className = "rectangle"
+            shape.style.backgroundColor = 'black'
+            main.style.backgroundColor = 'white'
+        }
+        function red(){
+            shape.style.backgroundColor = 'red';
+        }
+        function blue(){
+            shape.style.backgroundColor = 'blue';
+        }
+        function toggle(){
+            if(count>0){
+                main.classList.toggle("toggle")
+
+            }
+            main.classList.toggle("togg")            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="rate">
+    <div class="icon"><img src="./images/icon-star.svg" alt=""></div>
+    <h2>How did we do?</h2>
+
+    <p> Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!</p>
+
+    <div class="buttons" >
+      <button id="buttons" onclick="rating()">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+    </div>
+    <center>
+      <div class="submit">
+        <button>SUBMIT</button>
+      </div>
+    </center>
+
+  </div>
+<script>
+var buttons = document.getElementById("buttons")
+function rating(){
+  
+  buttons.classlist.toggle("colourchange")
+
+}
+</script>
+
+
+</body>
+
+</html>
+
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .icon {
+    background-color: hsl(213, 19%, 18%);
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  h2 {
+    color: white;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  p {
+    color: white;
+    font-size: 15px;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .rate {
+    width: 350px;
+    background-color: hsl(216, 12%, 8%);
+    padding: 50px;
+    border-radius: 30px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 20px;
+
+    button {
+      height: 30px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: hsl(213, 19%, 18%);
+      border: 0px;
+      color: white;
+    }
+    button:hover{
+      background-color:  hsl(25, 97%, 53%);
+    }
+  }
+.submit{
+  margin-top: 20px;
+  button {
+    width: 350px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: hsl(25, 97%, 53%);
+    border: 0px;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  button:hover{
+    color:  hsl(25, 97%, 53%);
+    background-color: white;
+  }
+}
+.colourchange{
+  background-color: hsl(217, 12%, 63%);
+}
+</style>

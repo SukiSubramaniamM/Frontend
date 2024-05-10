@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Indicator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <center>
+            <h1>Password Strength Indicator</h1>
+        </center>
+        <div class="container">
+            <div class="innput">
+                <input type="password" id="password" placeholder="Enter your password" oninput="checkStrength()">
+                <button onclick="showPassword()" id="button">Show</button>
+            </div>
+            <div id="colours">
+                <div id="red" class="colour"></div>
+                <div id="orange" class="colour"></div>
+                <div id="green" class="colour"></div>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkStrength() {
+            var pass = document.getElementById("password");
+            var passvalue = pass.value;
+            var red = document.getElementById("red");
+            var orange = document.getElementById("orange");
+            var green = document.getElementById("green");
+            var result = document.getElementById("result");
+
+            // Reset colours
+            red.style.backgroundColor = "";
+            orange.style.backgroundColor = "";
+            green.style.backgroundColor = "";
+
+            if (passvalue.length < 4) {
+                red.style.backgroundColor = "red";
+                result.innerHTML = "Your Password is Very Weak";
+                result.style.color = "red"
+                return;
+            }
+
+            var hasUpperCase = /[A-Z]/.test(passvalue);
+            var hasLowerCase = /[a-z]/.test(passvalue);
+            var hasNumbers = /\d/.test(passvalue);
+            var hasSpecialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(passvalue);
+
+            if (hasUpperCase && hasLowerCase && hasNumbers && hasSpecialCharacters) {
+                result.innerHTML = 'Your Password is Strong';
+                green.style.backgroundColor = "green";
+                orange.style.backgroundColor = "orange";
+                red.style.backgroundColor = "red";
+                result.style.color = "green"
+                return;
+            }
+
+            orange.style.backgroundColor = "orange";
+            red.style.backgroundColor = "red";
+            result.style.color = "orange"
+            result.innerHTML = 'Your Password is Weak';
+        }
+
+        function showPassword() {
+            var pass = document.getElementById("password");
+            var btn = document.getElementById("button")
+            if (pass.type == "password") {
+                pass.type = "text"
+                btn.textContent = "Hide"
+            }
+            else {
+                pass.type = "password"
+                btn.textContent = "Show"
+            }
+        }
+    </script>
+</body>
+
+</html>

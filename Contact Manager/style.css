@@ -1,0 +1,46 @@
+.body{
+    margin: 0px;
+    border: 0px;
+}
+
+
+.top{
+    background-color: black;
+    margin: 0px;
+
+    h1{
+        color: white;
+        text-align: center;
+    }
+}
+
+.bottom{
+
+    button{
+        background-color: blue;
+        color: white;
+        margin-top: 10px;
+        border: 1px solid black;
+    }
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .resname{
+        font-weight: bold;
+    }
+
+    button{
+        margin-top: 5px;
+        background-color:white;
+        color: red;
+        border-color: red;
+        border-radius: 5px;
+    }
+}

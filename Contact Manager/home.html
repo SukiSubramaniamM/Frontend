@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <h1>CONTACT MANAGER</h1>
+        </div>
+        <div class="bottom">
+            <h1>Add Contact</h1>
+            <p>Name</p>
+            <input type="text" placeholder="Enter Your Name" id="name">
+            <p>Email address</p>
+            <input type="email" placeholder="Enter your Email" id="email">
+            <p>School</p>
+            <input type="text" placeholder="Enter your School Name" id="school">
+            <br>
+            <button onclick="addContact()">Submit</button>
+        </div>
+        <hr>
+    </div>
+    <div id="contact-list"></div>
+
+    <script>
+        function addContact() {
+            var personName = document.getElementById("name").value;
+            var personEmail = document.getElementById("email").value;
+            var personschool = document.getElementById("school").value;
+            if (personName && personEmail && personschool) {
+                var contact = {
+                    name: personName,
+                    email: personEmail,
+                    school:personschool
+                };
+
+                
+                var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
+                contacts.push(contact);
+
+                localStorage.setItem("contacts", JSON.stringify(contacts));
+
+                displayContacts();
+
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("school").value = "";
+            } else {
+                alert("Please enter the details");
+            }
+        }
+
+        function displayContacts() {
+            var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+            var contactList = document.getElementById("contact-list");
+
+            contactList.innerHTML = "";
+
+            contacts.forEach(function (contact, index) {
+                
+                var contactDiv = document.createElement("div");
+                contactDiv.classList.add("content");
+
+                contactDiv.innerHTML = `
+                <div class="result">
+                    <div class="content">
+                        <div class="resname"> Name: ${contact.name}</div>
+                        <div class="resemail"> Email ID: ${contact.email}</div>
+                        <div class="resschool">School Name: ${contact.school}</div>
+                    </div>
+
+                    <div class="resbutton"><button onclick="deleteContact(${index})">Delete</button></div>
+                </div>
+                `;
+
+                contactList.appendChild(contactDiv);
+            });
+        }
+
+        function deleteContact(index) {
+            var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+            contacts.splice(index, 1);
+            localStorage.setItem("contacts", JSON.stringify(contacts));
+            displayContacts();
+        }
+
+        window.onload = displayContacts;
+    </script>
+</body>
+
+</html>

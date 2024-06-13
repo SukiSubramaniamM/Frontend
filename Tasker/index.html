@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <img src="./Images/notepad.png"
+                alt="">
+        </div>
+        <div class="right">
+            <h1>Welcome to Tasker</h1>
+            <p>Please , insert your information to access your tasks.</p>
+            <div class="email">
+                <h3>Email</h3>
+                <input type="email" placeholder="Enter your Email Address" id="email">
+            </div>
+            <div class="password">
+                <h3>Password</h3>
+                <input type="password" id="password" placeholder="Insert your password">
+            </div>
+            <div class="check">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div>
+            <button onclick="sign()"> Sign in</button>
+            <p>Don't have an account? <b>Sign up</b></p>
+
+        </div>
+    </div>
+    <script>
+        function sign(){
+            var email = document.getElementById("email").value
+            var password = document.getElementById("password").value
+            if (email == "suki@mfedu.com" && password == "123456" ){
+                window.location.href="Tasks.html"
+            }
+            else{
+                window.alert("Email and Password is incorrect")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    p{
+        font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+    }
+    h1{
+        font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+    }
+    .main{
+    display: flex;
+    margin: 0px;
+}
+.right{
+    padding-top: 200px;
+    padding-left: 200px;    
+}
+.check{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.email input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+
+}
+.password input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    width: 325px;
+    border-radius: 5px;
+    background-color: rgb(16, 16, 135);
+    color: white;
+    font-weight: bold;
+}
+b{
+    color: rgb(16, 16, 135);
+}
+img{
+    height: 450px;
+    
+}
+.left{
+        background-color:blanchedalmond;
+        height:100vh;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+a{
+    text-decoration: none;
+    color: white;
+}
+</style>

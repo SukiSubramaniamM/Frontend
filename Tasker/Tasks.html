@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="tasks.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo">
+                <img src="./Images/notepad.png" alt="Notepad Logo">
+            </div>
+            <div class="buttons">
+                <button class="task"><img src="./Images/list.png" alt="Tasks Icon">Tasks</button>
+                <button class="categories" onclick="toggleCategories()"><img src="./Images/file.png"
+                        alt="Categories Icon">Categories <img src="./Images/expand_more_FILL0_wght400_GRAD0_opsz24.png"
+                        alt="Expand Icon"></button>
+                <div class="caty" id="caty" style="display: none;">
+                    <div class="none">None</div>
+                    <div class="home">Home</div>
+                    <div class="school">School</div>
+                    <div class="shopList">Shopping List</div>
+                </div>
+                <button class="settings"><img src="./Images/settings.png" alt="Settings Icon">Settings</button>
+                <button class="logout"><img src="./Images/logout_FILL0_wght400_GRAD0_opsz24.png" alt="Logout Icon"><a
+                        href="index.html"> Logout</a></button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="title">
+                <h1>All your Tasks</h1>
+            </div>
+            <div class="navbar">
+                <div class="left1">
+                    <h2>Tasks</h2>
+                </div>
+                <div class="right1">
+                    <div class="buttons">
+                        <button>All</button>
+                        <button>Done</button>
+                        <button>Not Done</button>
+                        <img src="./Images/filter.png" alt="Filter Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="taskbar" id="taskbar" style="display: none;">
+                <p>Insert Name</p>
+                <input type="text" class="taskName" placeholder="Task Name">
+                <p>Select a category</p>
+                <select name="Categories">
+                    <option value="none">None</option>
+                    <option value="home">Home</option>
+                    <option value="school">School</option>
+                    <option value="shopping">Shopping List</option>
+                </select>
+                <div class="confirm">
+                    <button onclick="cancelTaskbar()">Cancel</button>
+                    <button class="add" onclick="addnewtask()">Add</button>
+                </div>
+            </div>
+            <center>
+                <div class="container">
+                    <input type="radio">
+                    <h2>Example task</h2>
+                    <!-- <h4>category</h4> -->
+                </div>
+                <div class="addtask" onclick="toggleTaskbar()">
+                    <img src="./Images/add_box_24dp_FILL0_wght400_GRAD0_opsz24 (1).png" alt="Add Task Icon">
+                    Add a Task
+                </div>
+            </center>
+        </div>
+    </div>
+    <script src="tasks.js"></script>
+</body>
+
+</html>

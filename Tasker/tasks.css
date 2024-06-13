@@ -1,0 +1,297 @@
+body {
+    margin: 0px;
+}
+
+.main {
+    display: flex;
+}
+
+.left {
+    height: 100vh;
+    width: 25%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+
+    img {
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    button {
+        background-color: blanchedalmond;
+        width: 150px;
+        border-radius: 8px;
+        margin-left: -20px;
+    }
+
+    .task {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: 0px;
+
+        }
+    }
+
+    .categories {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: 0px;
+        }
+    }
+
+    .settings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: 0px;
+
+
+        }
+    }
+
+    .logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        margin-top: 200px;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-top: 0px;
+
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.right {
+    width: 75%;
+    text-align: center;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 500px;
+    
+        .buttons {
+            display: flex;
+            gap: 20px;
+    
+            button {
+                width: 100px;
+                border-radius: 20px;
+            }
+        }
+    }
+    .container{
+        width: 80%;
+        border: 1px solid rgb(167, 20, 167);
+        height: 75px;
+        border-radius: 25px;
+        color: black;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        padding-left: 20px;
+
+        .container-elements{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h2{
+                margin-top: 6px;
+            }
+
+            p{
+                margin-top: -10px;
+            }
+        }
+    }
+
+    .addtask {
+        width: 80%;
+        border: 1px solid rgb(167, 20, 167);
+        height: 50px;
+        border-radius: 25px;
+        color: black;
+        background-color: rgb(244, 203, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        /* position: relative;  */
+    
+        img{
+            height: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+.tasks{
+    width: 80%;
+    border: 1px solid rgb(167, 20, 167);
+    height: 75px;
+    border-radius: 25px;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+.taskName{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.category{
+    font-size: 15px;
+}
+
+#input{
+    width: 15px;
+    height: 15px;
+    margin-left: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+
+span{
+    width: 1px;
+    height: 50px;
+    background-color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.inboximg{
+   margin-left: 50%;
+   position: absolute;
+
+    img{
+        height: 40px;
+        margin-left: 20px;
+    }
+}
+
+.taskbar{
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 10%;
+    display: none;
+    
+
+    .confirm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+
+        button{
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: white;
+            color: red;
+            width: 60px;
+            height: 30px;
+        }
+
+        .add{
+            border: 1px solid green;
+            border-radius: 5px;
+            background-color: white;
+            color: green;
+        }
+    }
+}
+
+.caty{
+    margin-top: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;   
+    background-color: blanchedalmond;
+    position: absolute;
+    margin-top: 120px;
+    width: 150px;
+    padding: 10px 0px 10px 0px; 
+    border: 1px solid;
+    border-radius: 10px;
+
+
+    .none:hover{
+        background-color: white;
+    }
+
+    .home:hover{
+        background-color: white;
+    }
+
+    .school:hover{
+        background-color: white;
+    }
+
+    .shopList:hover{
+        background-color: white;
+    }
+
+    
+}
+button:hover{
+    background-color: white;
+}
+
